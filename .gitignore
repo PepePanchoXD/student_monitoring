@@ -1,0 +1,28 @@
+# Common ignores for Moodle plugin development
+vendor/
+node_modules/
+.DS_Store
+.idea/
+*.log
+.env
+coverage/
+*.cache
+*.sqlite
+*.sqlite3
+
+# Composer vendor
+/vendor/
+
+# npm
+/node_modules/
+
+# Local development
+.vscode/
+nbproject/
+
+# Ignore built assets
+dist/
+public/
+
+# Ignore system files
+Thumbs.db

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="local/student_monitoring/db" VERSION="2025110400" COMMENT="Install file for local_student_monitoring" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <TABLES>
+        <TABLE NAME="local_studentmonitoring" COMMENT="Stores monitoring sessions for student_monitoring plugin">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Primary key id"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="User id"/>
+                <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Course id"/>
+                <FIELD NAME="cmid" TYPE="int" LENGTH="10" NOTNULL="false" COMMENT="Course module id (cmid)"/>
+                <FIELD NAME="modname" TYPE="char" LENGTH="255" NOTNULL="false" COMMENT="Module name"/>
+                <FIELD NAME="studentname" TYPE="char" LENGTH="255" NOTNULL="false" COMMENT="Student full name"/>
+                <FIELD NAME="activityname" TYPE="char" LENGTH="255" NOTNULL="false" COMMENT="Activity instance name"/>
+                <FIELD NAME="timestart" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Session start timestamp"/>
+                <FIELD NAME="timeend" TYPE="int" LENGTH="10" NOTNULL="false" COMMENT="Session end timestamp"/>
+                <FIELD NAME="duration" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" COMMENT="Duration in seconds"/>
+                <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" COMMENT="Record last modified timestamp"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="Primary key"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="userididx" UNIQUE="false" FIELDS="userid" COMMENT="Index on userid"/>
+                <INDEX NAME="courseididx" UNIQUE="false" FIELDS="courseid" COMMENT="Index on courseid"/>
+                <INDEX NAME="cmididx" UNIQUE="false" FIELDS="cmid" COMMENT="Index on cmid"/>
+            </INDEXES>
+        </TABLE>
+    </TABLES>
+</XMLDB>

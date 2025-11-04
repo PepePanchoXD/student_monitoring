@@ -6,7 +6,7 @@
 // necessary upgrade steps.
 //
 // @package    local_student_monitoring
-// @copyright  2025 Your Name
+// @copyright  2025 Jose Salazar
 // @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
 defined('MOODLE_INTERNAL') || die();
